@@ -22,12 +22,12 @@ const config = {
     },
     extend: {
       colors: {
-        primary: "#16213F",
+        primary: "#22124B",
         secondary: "#050D28",
         lighted: "#EFEFEF",
-        blue: {
-          DEFAULT: "#336DFF",
-          hover: "336DFF",
+        yellow: {
+          DEFAULT: "#DAEE50",
+          hover: "#DAEE50",
         },
       },
       keyframes: {
