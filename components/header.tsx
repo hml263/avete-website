@@ -20,7 +20,7 @@ const Header = () => {
             <div className="hidden items-center gap-x-8 xl:flex">
                 <Nav />
                 <Link to='/' spy={true} smooth={true}
-                className="text-md rounded-full bg-yellow px-6 py-2 text-medium text-white transition-all hover:text-primary cursor-pointer"> 
+                className="text-md rounded-full bg-yellow px-6 py-2 text-medium text-blue font-bold transition-all hover:text-primary cursor-pointer"> 
                     Sign Up
                 </Link>
                 <p>JP | EN</p>

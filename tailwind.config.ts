@@ -29,6 +29,10 @@ const config = {
           DEFAULT: "#DAEE50",
           hover: "#DAEE50",
         },
+        blue: {
+          DEFAULT: "#38307C",
+          hover: "#38307C",
+        },
       },
       keyframes: {
         "accordion-down": {

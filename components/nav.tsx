@@ -6,10 +6,6 @@ const menu = [
         href: '#mission'
     },
     {
-        name:'concept',
-        href: '#concept'
-    },
-    {
         name:'product',
         href: '#product'
     },
