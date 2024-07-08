@@ -29,7 +29,7 @@ const Hero = () => {
               <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
             </h1>
             <span className='text-[20px] font-medium '>Next Gen AI</span><br />
-            <div className='py-6'>
+            <div className='py-6 w-3/4'>
               <p>
                 Revolutionize construction sites with our AI
                 powered solution. Our innovative tools seamlessly
