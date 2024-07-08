@@ -22,14 +22,14 @@ const Hero = () => {
       <div className='container mx-auto h-full'>
         <div className='flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-8'>
           {/* text */}
-          <div className='text-left xl:text-left'>
+          <div className='text-center xl:text-left'>
             <span className='text-[20px] font-medium leading-[2rem]'>Enhancing</span><br />
             <span className='text-[20px] font-medium leading-[2rem]'>Construction</span><br />
-            <h1 className="text-yellow text-[30px] uppercase font-bold">
+            <h1 className="text-yellow text-[30px] uppercase font-bold  xl:flex xl:justify-start flex justify-center ">
               <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
             </h1>
             <span className='text-[20px] font-medium '>Next Gen AI</span><br />
-            <div className='py-6 w-3/4'>
+            <div className='py-6 lg:w-3/4 xl:text-left text-center'>
               <p>
                 Revolutionize construction sites with our AI
                 powered solution. Our innovative tools seamlessly
