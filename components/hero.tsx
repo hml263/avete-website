@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section className='w-f pt-40'>
       <div className='container mx-auto h-full'>
-        <div className='flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-8'>
+        <div className='flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-8 xl:py-[100px] pb-[150px]'>
           {/* text */}
           <div className='text-center xl:text-left'>
             <span className='text-[20px] font-medium leading-[2rem]'>Enhancing</span><br />

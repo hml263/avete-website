@@ -10,7 +10,7 @@ const menu = [
         href: '#product'
     },
     {
-        name:'blog',
+        name:'news/blog',
         href: '#blog'
     },
     {
