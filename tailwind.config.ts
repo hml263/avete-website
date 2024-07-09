@@ -34,7 +34,7 @@ const config = {
           hover: "#38307C",
         },
         transparent: {
-          DEFAULT: "rgb(56 48 124 / 60%)",
+          DEFAULT: "rgb(56 48 124 / 31%)",
 
         }
       },

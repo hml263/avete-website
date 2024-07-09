@@ -1,5 +1,5 @@
 'use client'
-
+import { useTranslations } from "next-intl"
 import React from 'react';
 import { Download } from 'lucide-react'
 import Link from 'next/link'
@@ -17,7 +17,8 @@ const Hero = () => {
     );
     return () => clearTimeout(intervalId);
   }, []);
-  return (
+  const t = useTranslations('Hero')
+   return (
     <section className='w-f pt-40 '  style={{
       backgroundImage: `url('/global-bg.png')`,
        height: '750px',
@@ -28,8 +29,8 @@ const Hero = () => {
         <div className='flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-32 xl:py-[100px] pb-[150px]'>
           {/* text */}
           <div className='text-center xl:text-left'>
-            <span className='text-[20px] font-medium leading-[2rem]'>Enhancing</span><br />
-            <span className='text-[20px] font-medium leading-[2rem]'>Construction</span><br />
+            <span className='text-[20px] font-medium leading-[2rem]'>{t('enchancing')}</span><br />
+            <span className='text-[20px] font-medium leading-[2rem]'>{t('construction')}</span><br />
             <h1 className="text-yellow text-[30px] uppercase font-bold  xl:flex xl:justify-start flex justify-center ">
               <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
             </h1>
