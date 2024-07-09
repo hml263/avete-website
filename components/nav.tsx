@@ -3,23 +3,23 @@ import { Link, animateScroll as scroll} from 'react-scroll'
 const menu = [
     {
         name:'mission',
-        href: '#mission'
+        href: 'mission'
     },
     {
         name:'product',
-        href: '#product'
+        href: 'product'
     },
     {
         name:'news/blog',
-        href: '#blog'
+        href: 'blog'
     },
     {
         name:'company',
-        href: '#company'
+        href: 'company'
     },
     {
         name:'contact',
-        href: '#contact'
+        href: 'contact'
     },
 
 ]
