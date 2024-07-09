@@ -7,7 +7,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <section className='bg-primary py-8'>
+    <section className='bg-secondary py-8'>
       <div className='container flex flex-col items-center justify-center'>
         <p className='text-sm font-semibold capatalize text-center'>
          

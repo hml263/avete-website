@@ -33,6 +33,10 @@ const config = {
           DEFAULT: "#38307C",
           hover: "#38307C",
         },
+        transparent: {
+          DEFAULT: "rgb(56 48 124 / 60%)",
+
+        }
       },
       keyframes: {
         "accordion-down": {

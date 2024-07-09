@@ -18,9 +18,14 @@ const Hero = () => {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <section className='w-f pt-40'>
-      <div className='container mx-auto h-full'>
-        <div className='flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-8 xl:py-[100px] pb-[150px]'>
+    <section className='w-f pt-40 '  style={{
+      backgroundImage: `url('/global-bg.png')`,
+       height: '750px',
+       backgroundRepeat: 'no-repeat',
+       backgroundSize: 'cover'
+      }}>
+      <div className='container mx-auto h-full '>
+        <div className='flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-32 xl:py-[100px] pb-[150px]'>
           {/* text */}
           <div className='text-center xl:text-left'>
             <span className='text-[20px] font-medium leading-[2rem]'>Enhancing</span><br />
@@ -29,7 +34,7 @@ const Hero = () => {
               <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
             </h1>
             <span className='text-[20px] font-medium '>Next Gen AI</span><br />
-            <div className='py-6 lg:w-3/4 xl:text-left text-center'>
+            <div className='py-6 lg:w-2/4 xl:text-left text-center'>
               <p>
                 Revolutionize construction sites with our AI
                 powered solution. Our innovative tools seamlessly
@@ -45,7 +50,7 @@ const Hero = () => {
           </div>
 
           {/* image */}
-          <HeroGlobe />
+          {/* <HeroGlobe /> */}
         </div>
       </div>
     </section>

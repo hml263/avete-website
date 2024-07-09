@@ -6,7 +6,7 @@ import FadeIn from "@/lib/variants"
 
 const Contact = () => {
   return (
-    <section id='contact' className="z-30 translate-y-1 bg-secondary">
+    <section id='contact' className="z-30 translate-y-1 bg-primary">
     <div className="container w-full py-[50px] lg:py-[100px]">
         <div className="flex flex-col justify-between gap-12 px-2 lg:flex-row lg:px-0">
             <motion.div
