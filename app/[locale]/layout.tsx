@@ -6,7 +6,7 @@ import "./globals.css";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Test from '@/components/test';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +30,9 @@ export default  async function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-      
+      <head>
+    <link rel="icon" href="./avete-logo.png" sizes="any" />
+  </head>
         <NextIntlClientProvider messages={messages}>
         <Header />
         {children}
