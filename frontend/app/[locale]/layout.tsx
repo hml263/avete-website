@@ -29,10 +29,11 @@ export default  async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={locale}>
-      <body className={inter.className}>
       <head>
     <link rel="icon" href="./avete-logo.png" sizes="any" />
   </head>
+      <body className={inter.className}>
+      
         <NextIntlClientProvider messages={messages}>
         <Header />
         {children}
