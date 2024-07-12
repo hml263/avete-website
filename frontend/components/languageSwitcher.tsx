@@ -16,7 +16,9 @@ export default function LocalSwitcher() {
     });
   };
   return (
+   
     <label className=''>
+      
       <p className='sr-only'>Change Language</p>
       <select
         defaultValue={localActive}
@@ -28,5 +30,6 @@ export default function LocalSwitcher() {
         <option value='jp'>JP</option>
       </select>
     </label>
+  
   );
 }
