@@ -33,7 +33,7 @@ const Mission = () => {
                             new standards in safety protocols and continuous learning. </p>
                     </motion.div>
                     <motion.div
-                    variants={FadeIn('left', 0.2)}
+                    variants={FadeIn('up', 0.2)}
                     initial= 'hidden'
                     whileInView = {'show'}
                     viewport= {{ once:true , amount: 0.8}}
