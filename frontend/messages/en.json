@@ -6,7 +6,32 @@
         "mission": "Mission"
     },
     "Hero":{
-        "enchancing": "Enchancing",
-        "construction": "Construction"
+        "enhancing": "Enhancing",
+        "construction": "Construction",
+        "nextgen": "BY Next Gen AI",
+        "safety": "Safety",
+        "productivity": "Productivity",
+        "training": "Training",
+        "herodesc": "Revolutionize construction sites with our AI powered solution. Our innovative tools seamlessly integrate into your workflow, ensuring a safer and more efficient work environment."
+    },
+    "Mission":{
+        "mdesc": "Our mission is to utilize the vast amounts of data generated on construction sites, to provide context-specific safety recommendations, ensuring a safer and more efficient work environment. By promoting continuous learning and implementing advanced safety protocols, we aim to revolutionize the way construction sites operate, enhancing both safety and productivity for all workers.",
+        "vdesc": "We envision a world where advanced data utilization and technology-driven insights make every construction site exceptionally safe and efficient. We aspire to be the foremost platform for intelligent data utilization, setting new standards in safety protocols and continuous learning."
+    },
+    "Product":{
+        "p-glass": "Smart Glasses",
+        "p-phone": "Smart Phone",
+        "p-cam": "Body Cams",
+        "protocols": "Your company's safety protocols"
+    },
+    "Company":{
+        "corporate-info": "CORPORATE INFO",
+        "company-name": "Company Name",
+        "address": "Address",
+        "established": "Established",
+        "capital": "Capital",
+        "avete": "AVETE Pvt Ltd.",
+        "tokyo": "Tokyo, Koto-Ku, MinamiSunamachi, ７-１-１６",
+        "e-date": "11 November 2022"
     }
   }

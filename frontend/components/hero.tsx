@@ -5,42 +5,57 @@ import { Download } from 'lucide-react'
 import Link from 'next/link'
 import TextTransition, { presets } from 'react-text-transition';
 import HeroGlobe from './heroGlobe';
+import { Swipe } from "swipe-animate";
 
-const TEXTS = ['Safety', 'Productivity', 'Training'];
+// const arrayOfWords: string[]  = ['Safety', 'Productivity', 'Training'];
+const arrayOfWords: string[] = [
+  'safety',
+  'productivity',
+  'training',
+];
 const Hero = () => {
-  const [index, setIndex] = React.useState(0);
-
-  React.useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000, // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
+ 
   const t = useTranslations('Hero')
    return (
-    <section className='w-f lg:pt-20 pt-40 '  style={{
-      // backgroundImage: `url('/global-bg.png')`,
-      //  height: '750px',
-      //  backgroundRepeat: 'no-repeat',
-      //  backgroundSize: 'cover'
-      }}>
-      <div className='container mx-auto h-full '>
-        <div className='flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-32 xl:py-[100px] pb-[150px]'>
+    <section className='max-w-full' >
+        <video
+        autoPlay
+        loop
+        muted
+        className="hidden xl:flex z-10 xl:min-h-[auto] relative mx-auto"
+       
+      >
+        <source src="/globe-animate.mp4" type="video/mp4" />
+      </video>
+      <video
+        autoPlay
+        loop
+        muted
+        className="sm:flex w-[100%] xl:hidden z-10 w-f min-w-full pt-[100px] max-w-none absolute "
+      >
+        <source src="/Globe-Mobile.mp4" type="video/mp4" />
+      </video>
+  
+      <div className='container mx-auto xl:top-0  xl:h-[500px]  xl:mt-[-600px] relative top-[350px] h-[650px] md:top-[600px] md:h-[800px] '>
+        <div className='flex flex-col items-center justify-between gap-10 xl:flex-row   '>
           {/* text */}
-          <div className='text-center xl:text-left'>
-            <span className='text-[30px] font-medium leading-[2rem]'>{t('enchancing')}</span><br />
+          <div className='text-center xl:text-left z-20 '>
+            <span className='text-[30px] font-medium leading-[2rem] relative top-[-18px]'>{t('enhancing')}</span><br />
             <span className='text-[30px] font-medium leading-[2rem]'>{t('construction')}</span><br />
-            <h1 className="text-yellow text-[40px] uppercase font-bold  xl:flex xl:justify-start flex justify-center ">
-              <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
-            </h1>
-            <span className='text-[30px] font-medium '>Next Gen AI</span><br />
-            <div className='py-6 lg:w-2/4 xl:text-left text-center'>
+            <div className="text-yellow text-[40px] uppercase font-bold  xl:flex xl:justify-start flex justify-center">
+           
+			{" "}
+			<Swipe
+				words={arrayOfWords.map((key) => t(key))}
+				intervalDuration={3000}
+				
+			
+			/>
+		          </div>
+            <span className='text-[30px] font-medium '>{t('nextgen')}</span><br />
+            <div className='py-6 xl:text-left text-center xl:w-1/2'>
               <p>
-                Revolutionize construction sites with our AI
-                powered solution. Our innovative tools seamlessly
-                integrate into your workflow, ensuring a safer and
-                more efficient work environment.
+              {t('herodesc')}
               </p>
             </div>
             <div className='justify-center xl:flex-row xl:space-8 mt-4 flex flex-col items-center xl:justify-start'>

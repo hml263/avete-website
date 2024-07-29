@@ -16,8 +16,29 @@
       bottom: -7px;
       left: 0;
       width: 60px;
-      height: 7px;
-      background-color: #336Dff;
+      height: 4px;
+      background-color: #DAEE50;
       border-radius: 10px;
     }
+
+    .vertical-text {
+      transform: rotate(-90deg);
+      transform-origin: left top 0;
+      }
+      .vertical-img {
+        transform: rotate(90deg);
+        transform-origin: left top 0;
+        }
+    
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
   }

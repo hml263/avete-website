@@ -10,20 +10,17 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section id='contact' className="z-30 translate-y-1 bg-primary">
+    <section id='contact' className="z-30 translate-y-1 pt-[200px] ">
    
 
-    <div className='px6 container flex flex-col justify-between py-12 text-lg md:flex-row'>
-        <motion.div
-          variants={FadeIn('right', 0.2)}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{ once: true, amount: 0.8 }}
-          className='mb-12 mr-6 flex items-center  py-6'
+    <div className='px6 container flex flex-col justify-between text-lg md:flex-row'>
+        <div
+        
+          className='mb-12 mr-6 flex items-center'
         >
-          <h1 className='text-[40px] font-bold uppercase leading-[3rem]'>
-          <span className='under-line'>  Get in Touch</span><br/>
-          <span className="text-[14px] font-medium capitalize">Let us know what you're looking for, and we'll be happy to assist you. </span>
+          <h1 className='text-[30px] font-medium  leading-[3rem]'>
+          <span className='under-line uppercase'>  Get in Touch</span><br/>
+          <span className="text-[14px] font-normal">Let us know what you are looking for, and we will be happy to assist you. </span>
           <Image
               src='/Contact-Us.jpg' height={400} width={400} alt='mission' className="rounded-md mt-12"
               /> 
@@ -33,13 +30,10 @@ const Contact = () => {
         
        
               
-        </motion.div>
+        </div>
         
-        <motion.form
-          variants={FadeIn('left', 0.2)}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{ once: true, amount: 0.8 }}
+        <form
+          
           className='flex max-w-3xl flex-1 flex-col items-start gap-y-4 rounded-md bg-secondary/80 p-10'
         >
           <input
@@ -61,9 +55,9 @@ const Contact = () => {
             className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           />
            <input
-            type='number'
+            type="tel" minLength={10} maxLength={15} 
             placeholder='Phone Number '
-            required
+            required 
             className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           />
           <textarea
@@ -76,7 +70,7 @@ const Contact = () => {
             <p className='text-md capitalize'> Send </p>
             <Send className='h-5 w-5' />
           </button>
-        </motion.form>
+        </form>
       </div>
 </section>
 

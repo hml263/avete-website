@@ -22,7 +22,7 @@ export default function LocalSwitcher() {
       <p className='sr-only'>Change Language</p>
       <select
         defaultValue={localActive}
-        className=' bg-primary '
+        className=' bg-transparent '
         onChange={onSelectChange}
         disabled={isPending}
       >
