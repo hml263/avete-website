@@ -21,7 +21,7 @@ const Company = () => {
       <img
         className="rounded-t-lg mx-auto block"
         src="/uttam.jpg"
-        alt="CEO" width="370" height=""/>
+        alt="CEO" width="400" height=""/>
     </a>
     <div className="p-6">
       <h5 className="mb-2 text-xl font-medium leading-tight">Uttam Dwivedi, CEO</h5>
