@@ -19,10 +19,18 @@
         "vdesc": "We envision a world where advanced data utilization and technology-driven insights make every construction site exceptionally safe and efficient. We aspire to be the foremost platform for intelligent data utilization, setting new standards in safety protocols and continuous learning."
     },
     "Product":{
+        "p-description": "With advancements in IoT and AI technologies, construction sites are generating massive amounts of data. Utilizing this data effectively is more important than ever to maximize impact and draw meaningful insights. Our platform leverages this data to recommend context-specific safety guidelines for common construction activities, promoting continuous learning and enhanced safety protocols.",
         "p-glass": "Smart Glasses",
         "p-phone": "Smart Phone",
         "p-cam": "Body Cams",
-        "protocols": "Your company's safety protocols"
+        "protocols": "Your company\u0027s safety protocols",
+        "p-ai": "Generative AI cloud server",
+        "p-capture": "Capture images/videos of site",
+        "p-q1": "How many stepladders are present?",
+        "p-q2": "Is stepladder properly secured?",
+        "p-q3": "Is handrail installed?",
+        "p-q4": "How many workers are working?",
+        "p-q5": "Is worker working on Stepladder?"
     },
     "Company":{
         "corporate-info": "CORPORATE INFO",
@@ -33,5 +41,9 @@
         "avete": "AVETE Pvt Ltd.",
         "tokyo": "Tokyo, Koto-Ku, MinamiSunamachi, ７-１-１６",
         "e-date": "11 November 2022"
+    },
+    "Contact":{
+        "contact-title": "Let us know what you are looking for, and we will be happy to assist you."
+        
     }
   }

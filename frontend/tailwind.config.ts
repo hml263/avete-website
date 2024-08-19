@@ -19,6 +19,7 @@ const config = {
       md: "760px",
       lg: "960px",
       xl: "1200px",
+      dk: "1900px"
     },
     extend: {
       colors: {
@@ -32,6 +33,14 @@ const config = {
         blue: {
           DEFAULT: "#38307C",
           hover: "#38307C",
+        },
+        lightblue: {
+          DEFAULT: "blue",
+         
+        },
+        green: {
+          DEFAULT: "green",
+         
         },
         transparent: {
           DEFAULT: "rgb(56 48 124 / 0)",

@@ -3,9 +3,38 @@
 import Image from "next/image"
 import { motion } from 'framer-motion'
 import FadeIn from "@/lib/variants"
+import {useEffect, useState} from 'react'
+import BlogList from "./blogList"
+import apiService from "@/app/services/apiService"
+
+export type BlogType ={
+    id: string;
+    title: string;
+    description: string;
+    category:string;
+    image_url:string;
+}
 
 const Blog = () => {
+    const [blogs, setBlogs] = useState<BlogType[]>([]);
+
+    const getBlogs = async () => {
+    
+
+      const tmpBlogs = await apiService.get('/api/blogs')
+
+      setBlogs(tmpBlogs.data);
+        
+    };
+
+    useEffect(() => {
+        apiService.get('/api/blogs');
+
+        getBlogs();
+    }, []);
+
     return (
+        <>
         <section id='blog' className="z-30 translate-y-1 pt-[150px]">
             <div className="container w-full ">
                 <div className="flex flex-col justify-between gap-12 px-2 lg:flex-row lg:px-0">
@@ -13,57 +42,14 @@ const Blog = () => {
                         <h1 className='text-[30px] font-medium  leading-[3rem] pb-[30px]'>
                             <span className='under-line uppercase'>News/Blog</span></h1>
 
-                            
-                        <div className="max-w-sm w-full lg:max-w-full lg:flex mb-[30px]">
-                            <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"  style={{
-                                backgroundImage: `url('/mission-pic.png')`
-                            }} >
-                            </div>
-                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                                <div className="mb-8">
-                                    <p className="text-sm text-gray-600 flex items-center">
-                                        <svg className="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-                                        </svg>
-                                        Technology
-                                    </p>
-                                    <div className="text-gray-900 font-bold text-xl mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-                                </div>
-                                <div className="flex items-center">
-
-                                    <div className="text-sm">
-
-                                        <p className="text-gray-600">View More</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
-                            <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={{
-                                backgroundImage: `url('/mission-pic.png')`
-                            }} >
-                            </div>
-                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                                <div className="mb-8">
-                                    <p className="text-sm text-gray-600 flex items-center">
-                                        <svg className="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-                                        </svg>
-                                        Technology
-                                    </p>
-                                    <div className="text-gray-900 font-bold text-xl mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-                                </div>
-                                <div className="flex items-center">
-
-                                    <div className="text-sm">
-
-                                        <p className="text-gray-600">View More</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    {blogs.map((blog) => {
+                        return (
+                            <BlogList
+                            key={blog.id}
+                            blog={blog} />
+                        )
+                    })}        
+                   
 
 
                         {/* <p className="text-justify ">Coming Soon……….</p> */}
@@ -73,8 +59,41 @@ const Blog = () => {
                     </div>
 
                 </div>
+                <div className="flex items-center justify-center">
+                <nav aria-label="Page navigation example ">
+  <ul className="flex items-center -space-x-px h-8 text-sm justigy-center">
+    <li>
+      <a href="#blog" className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <span className="sr-only">Previous</span>
+        <svg className="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        </svg>
+      </a>
+    </li>
+   
+    <li>
+      <a href="#blog" aria-current="page" className="z-10 flex items-center justify-center px-3 h-8 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">1</a>
+    </li>
+    {/* <li>
+      <a href="#blog" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+    </li>
+    <li>
+      <a href="#blog" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
+    </li> */}
+    <li>
+      <a href="#blog" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <span className="sr-only">Next</span>
+        <svg className="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>
             </div>
         </section>
+        </>
     )
 }
 

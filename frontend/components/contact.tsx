@@ -5,10 +5,12 @@ import { motion } from 'framer-motion'
 import FadeIn from "@/lib/variants"
 import { Send } from 'lucide-react'
 import React from 'react'
+import { useTranslations } from "next-intl"
 
 
 
 const Contact = () => {
+  const t = useTranslations('Contact')
   return (
     <section id='contact' className="z-30 translate-y-1 pt-[200px] ">
    
@@ -20,7 +22,7 @@ const Contact = () => {
         >
           <h1 className='text-[30px] font-medium  leading-[3rem]'>
           <span className='under-line uppercase'>  Get in Touch</span><br/>
-          <span className="text-[14px] font-normal">Let us know what you are looking for, and we will be happy to assist you. </span>
+          <span className="text-[14px] font-normal">{t('contact-title')}</span>
           <Image
               src='/Contact-Us.jpg' height={400} width={400} alt='mission' className="rounded-md mt-12"
               /> 

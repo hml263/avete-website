@@ -54,6 +54,8 @@ CORS_ALLOWED_ORIGINS = [
    
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True 
+
 REST_AUTH = {
     "USE_JWT": True,
     "JWT_AUTH_HTTPONLY": False
@@ -82,7 +84,9 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'blog',
+    'team',
     'useraccount',
+   
 ]
 
 MIDDLEWARE = [

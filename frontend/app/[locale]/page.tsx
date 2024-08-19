@@ -6,6 +6,7 @@ import Blog from "@/components/blog";
 import Company from "@/components/company";
 import Contact from "@/components/contact";
 import { useTranslations } from "next-intl";
+import TrustLogo from "@/components/trustLogo";
 
 export default function Home() {
   const t = useTranslations('IndexPage');
@@ -15,6 +16,7 @@ export default function Home() {
    <main>
    
     <Hero />
+    <TrustLogo />
     <Mission />
     <Product />
     <Blog />

@@ -36,12 +36,13 @@ const Hero = () => {
         <source src="/Globe-Mobile.mp4" type="video/mp4" />
       </video>
   
-      <div className='container mx-auto xl:top-0  xl:h-[500px]  xl:mt-[-600px] relative top-[350px] h-[650px] md:top-[600px] md:h-[800px] '>
+      <div className='container mx-auto  xl:h-[500px]  xl:mt-[-600px] relative top-[350px] h-[650px] dk:top-[-80px] lg:top-[30px] xl:top-[50px] md:top-[600px] md:h-[800px] '>
         <div className='flex flex-col items-center justify-between gap-10 xl:flex-row   '>
           {/* text */}
           <div className='text-center xl:text-left z-20 '>
             <span className='text-[30px] font-medium leading-[2rem] relative top-[-18px]'>{t('enhancing')}</span><br />
             <span className='text-[30px] font-medium leading-[2rem]'>{t('construction')}</span><br />
+            <div className="h-[60px]">
             <div className="text-yellow text-[40px] uppercase font-bold  xl:flex xl:justify-start flex justify-center">
            
 			{" "}
@@ -52,6 +53,7 @@ const Hero = () => {
 			
 			/>
 		          </div>
+              </div>
             <span className='text-[30px] font-medium '>{t('nextgen')}</span><br />
             <div className='py-6 xl:text-left text-center xl:w-1/2'>
               <p>

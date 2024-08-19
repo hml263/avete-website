@@ -33,8 +33,8 @@ const MobileNav = () => {
         <SheetTrigger className='flex items-center'>
             <Menu className='size-6 text-yellow' />
         </SheetTrigger>
-        <SheetContent>
-            <div className='mb-10 mt-32 flex items-center justify-center gap-8'>
+        <SheetContent className='w-[50%]'>
+            <div className='mb-5 mt-16 flex items-center justify-center gap-8'>
                 <Link href='/'>
                     <Image src='/avete-logo.png' width={100} height={100} alt='logo' />
                 </Link>
@@ -44,8 +44,18 @@ const MobileNav = () => {
                     <Link href={item.href} key={index} className='text-lg font-medium capitalize'>
                         <span className='pb-1 transition-all hover:border-b-2 hover:border-yellow hover:text-yellow'>{item.name}</span>
                     </Link>
+                    
                 )}
+               
             </nav>
+            <Link href='/' 
+                className="flex items-center my-[20px] justify-center opacity-1 text-md rounded-full bg-yellow px-6 py-2 text-medium text-blue font-bold transition-all hover:text-primary cursor-pointer"> 
+                    Sign Up
+                </Link>
+            <div className='flex block items-center justify-center mt-[20px]'>
+            <Link href="/en">EN | </Link> 
+            <Link href="/jp" className='ml-[5px]'> JP</Link> 
+            </div>
         </SheetContent>
     </Sheet>
   )

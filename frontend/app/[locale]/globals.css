@@ -1,44 +1,257 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
+@tailwind components;
+@tailwind utilities;
 
-  @layer base{
-    body {
-      @apply bg-primary text-lighted leading-relaxed
-    }
-    span {
-      position: relative;
-    }
-    .under-line::after {
-      content: '';
-      position: absolute;
-      bottom: -7px;
-      left: 0;
-      width: 60px;
-      height: 4px;
-      background-color: #DAEE50;
-      border-radius: 10px;
-    }
 
-    .vertical-text {
-      transform: rotate(-90deg);
-      transform-origin: left top 0;
-      }
-      .vertical-img {
-        transform: rotate(90deg);
-        transform-origin: left top 0;
-        }
-    
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
+@layer base {
+  body {
+    @apply bg-primary text-lighted leading-relaxed
   }
+
+  span {
+    position: relative;
+  }
+
+  .under-line::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #DAEE50;
+    border-radius: 10px;
+  }
+
+  .vertical-text {
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+  }
+
+  .vertical-img {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+  }
+
+
+.rotate-60{
+  transform: rotate(60deg);
+}
+
+.rotate-60down{
+  transform: rotate(-60deg);
+}
+
+.one{
+  animation-delay: 3s;
+}
+
+.two{
+  animation-delay: 4s;
+}
+
+.three{
+  animation-delay: 5s;
+}
+
+.four{
+  animation-delay: 6s;
+}
+
+.five{
+  animation-delay: 7s;
+}
+
+.six{
+  animation-delay: 8s;
+}
+
+.seven{
+  animation-delay: 9s;
+}
+
+.eight{
+  animation-delay: 14s;
+}
+
+.nine{
+  animation-delay: 15s;
+}
+
+.ten{
+  animation-delay: 16s;
+}
+
+.eleven{
+  animation-delay: 17s;
+}
+
+.twelve{
+  animation-delay: 18s;
+}
+
+.thirteen{
+  animation-delay: 22s;
+}
+
+.fourteen{
+  animation-delay: 23s;
+}
+
+.fifthteen{
+  animation-delay: 24s;
+}
+
+.sixthteen{
+  animation-delay: 25s;
+}
+
+.seventeen{
+  animation-delay: 26s;
+}
+.animate{
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.fadeLeft{
+  animation-name: fadeLeft;
+}
+
+@keyframes fadeLeft{
+  from{
+    opacity:0;
+    transform:translate3d(0, 100%, 0);
+  }
+  to{
+    opacity:1;
+    transform: none;
+  }
+}
+
+.fadeIn{
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+   
+  }
+  to{
+    opacity:1;
+   
+  }
+}
+
+.fadeIn7{
+  animation-name: fadeIn7;
+  animation-duration: 5s;
+  
+}
+
+@keyframes fadeIn7{
+  0%{
+    opacity:0;
+   
+  }
+  50%{
+    opacity:1;
+   
+  }
+  
+  100%{
+    opacity:0;
+  }
+}
+
+
+.fadeIn5{
+  animation-name: fadeIn5;
+  animation-duration: 8s;
+  
+}
+
+@keyframes fadeIn5{
+  0%{
+    opacity:0;
+   
+  }
+  50%{
+    opacity:1;
+   
+  }
+  
+  100%{
+    opacity:0;
+  }
+}
+
+
+.fadeIn12{
+  animation-name: fadeIn5;
+  animation-duration: 5s;
+  
+}
+
+@keyframes fadeIn12{
+  0%{
+    opacity:0;
+   
+  }
+  50%{
+    opacity:1;
+   
+  }
+  
+  100%{
+    opacity:0;
+  }
+}
+
+.fadeIn11{
+  animation-name: fadeIn11;
+  animation-duration: 8s;
+  
+}
+
+@keyframes fadeIn11{
+  0%{
+    opacity:0;
+   
+  }
+  50%{
+    opacity:1;
+   
+  }
+  
+  100%{
+    opacity:0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
